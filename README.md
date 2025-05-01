@@ -37,26 +37,37 @@ It integrates theme switching functionality for a seamless user experience.
 - **Containerization**: Docker
 - **Version Control**: Git, GitHub
 
-## Installation
-
-Clone the repository:
-
-```bash
-   git clone https://github.com/iaman011/gogetwell.ai-internship.git
-   cd gogetwell.ai-internship
-   Install dependencies:
-
-npm install
-Run the application:
+#Installation
+Clone the Repository
+First, clone the repository to your local machine:
 
 bash
+Copy
+Edit
+git clone https://github.com/iaman011/gogetwell.ai-internship.git
+cd gogetwell.ai-internship
+Install Dependencies
+Install the necessary dependencies using npm:
 
+bash
+Copy
+Edit
+npm install
+Run the Application
+Start the application locally:
+
+bash
+Copy
+Edit
 npm run dev
 Running with Docker
-To run the application in Docker, build the container with the following command:
+To run the application in Docker, build the container using the following command:
 
 bash
+Copy
+Edit
 docker-compose up --build
+This will set up the environment and start the application in Docker containers.
 
 Contributing
 We welcome contributions! To get started:
