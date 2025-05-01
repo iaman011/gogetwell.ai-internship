@@ -1,54 +1,76 @@
-# React + TypeScript + Vite
+# GoGetWell AI Internship
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The `GoGetWell AI Internship` repository is designed for the internship program at GoGetWell. This project includes various features and practices related to AI integration, machine learning, and backend development using modern technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+1. Docker Support
+The project is containerized with Docker for easy setup and deployment.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A Dockerfile and docker-compose.yml are provided for building and running the application with a single command.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Theme Customization
+The app provides the ability to switch between different themes, providing a personalized user experience.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Themes are managed through a central themeStore.js in the src/store/ folder, which stores and manages the theme state.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Theme Provider Component
+A ThemeProvider.js component in the src/components/ folder is used to wrap the application, enabling theme switching functionality across the app.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+It uses React Context API to provide theme settings to all components.
+
+4. Dynamic Theme Switching
+The Themes.js component in the Home/themes/ folder provides the UI for users to choose their preferred theme.
+
+The themes are stored in src/themes/index.js and are easily extendable, allowing for more themes to be added.
+
+5. Home View
+The main page is located in the Home.js file within the Home/ folder. This view serves as the landing page of the application.
+
+It integrates theme switching functionality for a seamless user experience.
+
+## Technologies Used
+
+- **Frontend**: React.js, Vite, Typescript
+- **Containerization**: Docker
+- **Version Control**: Git, GitHub
+
+## Installation
+
+Clone the repository:
+
+```bash
+   git clone https://github.com/iaman011/gogetwell.ai-internship.git
+   cd gogetwell.ai-internship
+   Install dependencies:
+
+npm install
+Run the application:
+
+bash
+
+npm run dev
+Running with Docker
+To run the application in Docker, build the container with the following command:
+
+bash
+docker-compose up --build
+
+Contributing
+We welcome contributions! To get started:
+
+Fork the repository.
+
+Create a new branch.
+
+Make your changes.
+
+Submit a pull request.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgements
+Thanks to the GoGetWell team for the opportunity to work on this project.
